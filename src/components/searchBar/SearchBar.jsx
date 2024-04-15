@@ -60,7 +60,7 @@ const filterSearchData = getAllProduct
                         return (
                             <div key={index} className="py-2 px-2 cursor-pointer"
                             onClick={() => navigate(`/productinfo/${item.id}`)}>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 hover:bg-indigo-600 rounded-lg hover:text-white">
                                     <img className="w-10" src={item.productImageUrl} alt="" />
                                     {item.title}
                                 </div>
