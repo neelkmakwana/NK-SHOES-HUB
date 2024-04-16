@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDB } from "../../firebase/FirebaseConfig";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
-
+import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 
 const Signup = () => {
@@ -191,6 +191,7 @@ const Signup = () => {
 
             </div>
         </div>
+        <Footer/>
         </div>
     );
 }

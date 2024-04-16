@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import Loader from "../../components/loader/Loader";
 import Navbar from "../../components/navbar/Navbar";
 import { EmailAuthProvider } from "firebase/auth";
+import Footer from "../../components/footer/Footer";
 
 const ChangePassword = () => {
   const navigate = useNavigate();
@@ -129,7 +130,9 @@ const ChangePassword = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
+    
   );
 };
 
