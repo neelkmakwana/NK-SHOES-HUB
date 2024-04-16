@@ -7,7 +7,6 @@ import { auth, fireDB } from "../../firebase/FirebaseConfig";
 import Loader from "../../components/loader/Loader";
 import { QuerySnapshot, collection, doc, onSnapshot, query, where } from "firebase/firestore";
 import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
 
 const Login = () => {
     const context = useContext(myContext);
@@ -166,7 +165,6 @@ const Login = () => {
 
                 </div>
             </div>
-            <Footer/>
         </div>
     );
 }
