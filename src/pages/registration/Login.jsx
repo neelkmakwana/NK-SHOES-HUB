@@ -79,13 +79,13 @@ const Login = () => {
     }
 
     return (
-        <div className="bg-cyan-100">
+        <div className="bg-cyan-100" style={{ height: "100vh", overflow: "hidden" }}>
             <Navbar />
             <div className='flex justify-center items-center h-screen'>
                 {/* Loading Component */}
                 {/* {loading && <Loader />} */}
                 {/* Login Form  */}
-                <div className="login_Form bg-indigo-50 px-1 lg:px-8 py-6 border border-cyan-600 rounded-xl shadow-md">
+                <div className="login_Form bg-indigo-50 px-1 lg:px-8 py-6 border border-cyan-600 rounded-xl shadow-md" style={{ marginTop: '-25vh' }}>
                 <img src="https://firebasestorage.googleapis.com/v0/b/myecom-be317.appspot.com/o/logo-transparent-png.png?alt=media&token=579951d1-e259-4b25-8e29-0aab7f581b7b" alt="NK-SHOES HUB Logo" className="mx-auto" style={{ width: '300px', height: '50px' }} />
                 <br />
                     {/* Top Heading  */}
