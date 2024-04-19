@@ -135,7 +135,7 @@ const AllProduct = () => {
                                 disabled={currentPage === 1}
                             >
                                 <i className="fas fa-chevron-left md:mr-1"></i>
-                                Previous
+                                Prev
                             </button>
                         </li>
                         {Array(totalPages).fill().map((_, index) => (
