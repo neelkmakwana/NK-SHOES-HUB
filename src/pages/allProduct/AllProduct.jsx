@@ -18,7 +18,7 @@ const AllProduct = () => {
     const dispatch = useDispatch();
 
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 8;
+    const productsPerPage = 12;
 
     const addCart = (item) => {
         dispatch(addToCart(item));
@@ -134,12 +134,12 @@ const AllProduct = () => {
                                 onClick={() => paginate(currentPage - 1)}
                                 disabled={currentPage === 1}
                             >
-                                <i className="fas fa-chevron-left md:mr-2"></i>
+                                <i className="fas fa-chevron-left md:mr-1"></i>
                                 Previous
                             </button>
                         </li>
                         {Array(totalPages).fill().map((_, index) => (
-                            <li key={index} className="ml-3">
+                            <li key={index} className="ml-2">
                                 {handleEllipsis(index + 1) ? (
                                     <button
                                         className={`px-2 py-1 md:px-4 md:py-2 rounded-full ${currentPage === index + 1 ? 'bg-indigo-600 text-white' : 'bg-cyan-100 text-gray-700'}`}
@@ -148,18 +148,18 @@ const AllProduct = () => {
                                         {index + 1}
                                     </button>
                                 ) : (
-                                    <span>...</span>
+                                    <span>.</span>
                                 )}
                             </li>
                         ))}
-                        <li className="ml-3">
+                        <li className="ml-2">
                             <button
-                                className="px-2 py-1 md:px-4 md:py-2 flex items-center font-semibold bg-indigo-600 text-white rounded-md"
+                                className="px-2 py-1 md:px-2 md:py-2 flex items-center font-semibold bg-indigo-600 text-white rounded-md"
                                 onClick={() => paginate(currentPage + 1)}
                                 disabled={currentPage === totalPages}
                             >
                                 Next
-                                <i className="fas fa-chevron-right md:ml-2"></i>
+                                <i className="fas fa-chevron-right md:ml-1"></i>
                             </button>
                         </li>
                     </ul>
