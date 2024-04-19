@@ -149,14 +149,14 @@ const CategoryPage = () => {
                 onClick={() => paginate(currentPage - 1)}
                 disabled={currentPage === 1}
               >
-                <i className="fas fa-chevron-left mr-2"></i>
-                Previous
+                <i className="fas fa-chevron-left mr-1"></i>
+                Prev
               </button>
             </li>
             {Array(Math.ceil(filterProduct.length / productsPerPage))
               .fill()
               .map((_, index) => (
-                <li key={index} className="ml-3">
+                <li key={index} className="ml-2">
                   <button
                     className={`px-4 py-2 rounded-full ${
                       currentPage === index + 1
@@ -169,9 +169,9 @@ const CategoryPage = () => {
                   </button>
                 </li>
               ))}
-            <li className="ml-3">
+            <li className="ml-2">
               <button
-                className="px-4 py-2 flex items-center font-semibold bg-indigo-600 text-white rounded-md"
+                className="px-2 py-2 flex items-center font-semibold bg-indigo-600 text-white rounded-md"
                 onClick={() => paginate(currentPage + 1)}
                 disabled={
                   currentPage ===
@@ -179,7 +179,7 @@ const CategoryPage = () => {
                 }
               >
                 Next
-                <i className="fas fa-chevron-right ml-2"></i>
+                <i className="fas fa-chevron-right ml-1"></i>
               </button>
             </li>
           </ul>
