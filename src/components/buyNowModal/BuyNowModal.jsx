@@ -23,21 +23,27 @@ const BuyNowModal = ({ addressInfo, setAddressInfo, buyNowFunction }) => {
                     <div className="">
                         <h1 className=" text-center mb-5 text-2xl font-semibold"style={{ color: '#3949AB', fontFamily:"-moz-initial"}}>Fill The Details for Placing Order</h1>
                     </div>
+                    
                     <div className="mb-3">
-                        <input
-                            type="text"
-                            name="name"
-                            value={addressInfo.name}
-                            onChange={(e) => {
+                    <input
+                        type="text"
+                        name="name"
+                        value={addressInfo.name}
+                        onChange={(e) => {
+                            // Restrict input to alphabetic characters and spaces only
+                            const onlyLettersAndSpaces = /^[A-Za-z ]+$/;
+                            if (e.target.value === '' || onlyLettersAndSpaces.test(e.target.value)) {
                                 setAddressInfo({
                                     ...addressInfo,
                                     name: e.target.value
-                                })
-                            }}
-                            placeholder='Enter Your Name'
-                            className='bg-indigo-50 border border-indigo-600 px-2 py-2 w-full rounded-md outline-none text-indigo-600 placeholder-indigo-600'
-                        />
-                    </div>
+                                });
+                            }
+                        }}
+                        placeholder='Enter Your Name'
+                        className='bg-indigo-50 border border-indigo-600 px-2 py-2 w-full rounded-md outline-none text-indigo-600 placeholder-indigo-600'
+                    />
+                </div>
+
                     <div className="mb-3">
                         <input
                             type="text"
